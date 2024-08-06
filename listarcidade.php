@@ -66,7 +66,7 @@
 </head>
 <body>
     <?php
-        include('includes/conexao.php');
+        include('include/conexao.php');
         $sql = "SELECT * FROM Cidade";
         //Executa a consulta
         $result = mysqli_query($con, $sql);

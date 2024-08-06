@@ -66,8 +66,8 @@
 </head>
 <body>
     <?php
-        include('includes/conexao.php');
-        $sql = "SELECT * FROM Cliente";
+        include('include/conexao.php');
+        $sql = "SELECT * FROM pessoa";
         //Executa a consulta
         $result = mysqli_query($con, $sql);
     ?>
@@ -81,7 +81,7 @@
             <th>Código</th>
             <th>Nome</th>
             <th>Email</th>
-            <th>Senha</th>
+            
             <th>Alterar</th>
             <th>Deletar</th>
         </tr>
@@ -92,7 +92,7 @@
                 echo "<td>".$row['id']."</td>";
                 echo "<td>".$row['nome']."</td>";
                 echo "<td>".$row['email']."</td>";
-                echo "<td>".$row['senha']."</td>";
+                
                 echo "<td><a href='alteraCliente.php?id=".$row['id']."'>Alterar</a></td>";
                 echo "<td><a href='deletaCliente.php?id=".$row['id']."'>Deletar</a></td>";
                 echo "</tr>";
